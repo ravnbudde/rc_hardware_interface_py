@@ -9,7 +9,6 @@ Publiserte/abonnerte ROS2-kanaler:
 - to be announced
 """
 
-# pylint: disable=import-error
 import struct
 import serial
 import rclpy
