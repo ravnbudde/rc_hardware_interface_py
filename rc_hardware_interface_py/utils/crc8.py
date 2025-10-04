@@ -22,7 +22,10 @@ crc8_table = [
     116, 42, 200, 150, 21, 75, 169, 247, 182, 232, 10, 84, 215, 137, 107, 53
 ]
 
-def checksum_crc8(data):
+def checksum_crc8(data: bytes) -> int:
+    """
+    Beregner CRC-8 checksum for gitt data.
+    """
     check = 0
     for b in data:
         check = crc8_table[check ^ b]
