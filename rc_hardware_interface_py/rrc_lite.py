@@ -1,3 +1,15 @@
+"""
+rc_hardware_interface_py.rrc_node
+
+Denne modulen håndterer kommunikasjon med RRC Lite-controlleren over USB-serial.
+Alt som leses fra kontrolleren publiseres på ROS2-kanaler, og alt som skrives
+til kontrolleren kommer fra ROS2-kanaler.
+
+Publiserte/abonnerte ROS2-kanaler:
+- to be announced
+"""
+
+
 import serial
 import struct
 import rclpy
