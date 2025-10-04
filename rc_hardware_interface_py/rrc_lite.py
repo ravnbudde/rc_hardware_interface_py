@@ -9,9 +9,9 @@ Publiserte/abonnerte ROS2-kanaler:
 - to be announced
 """
 
-
-import serial
+# pylint: disable=import-error
 import struct
+import serial
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Imu
