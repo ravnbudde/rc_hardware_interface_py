@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'rrc_api_node = rrc_usb.main:main',
+            'rrc_node = rc_hardware_interface_py.rrc_lite:main',
         ],
     },
 )
