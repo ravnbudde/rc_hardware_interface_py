@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'rc_hardware_interface_py'
+package_name = 'rc_ros_robot_controller_py'
 
 setup(
     name=package_name,
@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'rrc_node = rc_hardware_interface_py.rrc_lite:main',
+            'rrc_node = rc_ros_robot_controller_py.ros_robot_controller_node:main',
         ],
     },
 )
