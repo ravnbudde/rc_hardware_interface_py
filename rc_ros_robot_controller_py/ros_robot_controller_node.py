@@ -10,8 +10,8 @@ from rclpy.node import Node
 from std_msgs.msg import UInt16
 from sensor_msgs.msg import Imu, Joy
 from rc_ros_robot_controller_py.ros_robot_controller_sdk import Board
-from rc_ros_robot_controller_interfaces_py.srv import GetBusServoState, GetPWMServoState
-from rc_ros_robot_controller_interfaces_py.msg import ButtonState, BuzzerState, LedState, MotorsState, BusServoState, SetBusServoState, SetPWMServoState, Sbus
+from rc_ros_robot_controller_interfaces.srv import GetBusServoState, GetPWMServoState
+from rc_ros_robot_controller_interfaces.msg import ButtonState, BuzzerState, LedState, MotorsState, BusServoState, SetBusServoState, SetPWMServoState, Sbus
 
 class RosRobotController(Node):
     gravity = 9.80665
@@ -39,6 +39,7 @@ class RosRobotController(Node):
         self.create_service(GetBusServoState, '~/bus_servo/get_state', self.get_bus_servo_state)
         self.create_subscription(SetPWMServoState, '~/pwm_servo/set_state', self.set_pwm_servo_state, 1)
         self.create_service(GetPWMServoState, '~/pwm_servo/get_state', self.get_pwm_servo_state)
+        self.get_logger().info('Kanaler er oprettet')
 
         self.clock = self.get_clock()
         self.create_timer(1.0/100.0, self.pub_callback)
